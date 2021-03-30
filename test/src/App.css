@@ -44,14 +44,30 @@ strong{
 ::selection{
   background:rgba(125, 188, 255, 0.6); }
 
-.filter-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap:  wrap;
-    justify-content: center;
-    flex-grow: 3;
-
+/*
+CSS for grid,
+edited by Uday.
+*/
+.flex-row-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding:10px 25px 15px;
 }
+.flex-row-container > .flex-row-item {
+  flex: 1 1 30%; /*grow | shrink | basis */
+  height: 100px;
+}
+
+.flex-row-item {
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+/* Edited this file till this point*/
 
 .bp3-heading{
   color:#182026;

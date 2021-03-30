@@ -1,5 +1,7 @@
 import React from 'react'
 import { Button, Card, Elevation } from "@blueprintjs/core";
+import { chunk } from 'lodash'
+import { Col, Row, Grid } from 'react-flexbox-grid'
 
 export const StudentView = ({data}) => {
     // data.filterIds
@@ -17,6 +19,7 @@ export const StudentView = ({data}) => {
 
 
     return (
+        <div className='flex-row-item'>
         <Card interactive={true} elevation={Elevation.TWO}>
         <h5><a href="#">{data.name}</a></h5>
         <p>{data.university}</p>
@@ -26,5 +29,6 @@ export const StudentView = ({data}) => {
         <p>Intent Score: {data.intent}</p>
         <p>Skill Score: {data.skillPoints}</p>
     </Card>
+    </div>
     )
 }

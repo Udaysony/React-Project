@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import {FilterView} from './FilterView'
 import { Button } from "@blueprintjs/core";
+import { Col, Row, Grid } from 'react-flexbox-grid'
 
 export const Filters = ({data, changeFilterId}) => {
 
@@ -23,27 +24,31 @@ export const Filters = ({data, changeFilterId}) => {
     //
 
     return (
-        <div>
+        <div >
+            <div className='flex-row-container'>
            {
-            filteredData.map((d) => 
+            filteredData.map((d) => < FilterView key= {d._id} data={d} changeFilterId={changeFilterId} /> )
+            }
+
+            </div>
+            <div>
+                <Button  onClick={() => 
+                    {
+                        if(Limit - INCREMENT >= 0 ){
+                            setLimit(Limit - INCREMENT)
+                        }
+                }}>{'<'}</Button>
                 
-                < FilterView key= {d._id} data={d} changeFilterId={changeFilterId} /> )}
+                <Button onClick={() =>  {
+                    //setLimit(Limit+INCREMENT)}>
+                    if(Limit + INCREMENT < data.length){
+                        setLimit(Limit+INCREMENT)
+                    }
+                    
+                }}>{'>'}</Button>
 
-            <p></p>
-            <Button onClick={() =>  {
-                //setLimit(Limit+INCREMENT)}>
-                if(Limit + INCREMENT < data.length){
-                    setLimit(Limit+INCREMENT)
-                }
-
-            }}>INC</Button>
-
-            <Button onClick={() => 
-            {
-                if(Limit - INCREMENT >= 0 ){
-                    setLimit(Limit - INCREMENT)
-                }
-            }}>DEC</Button>
+                
+            </div>
             
         </div>
     )
