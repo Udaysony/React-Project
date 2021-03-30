@@ -1,7 +1,7 @@
 
 import './App.css';
 import React, {useState} from 'react'
-import {Filter} from './components/Filter'
+import {Filters} from './components/Filters'
 import {Students} from './components/Students'
 import {mockStudentData, mockSearchData} from './mockData'
 
@@ -16,7 +16,9 @@ function App() {
   }
   return (
     <div className="App">
-      <Filter data={FilterData} changeFilterId = {changeFilterId} />
+      <Filters data={FilterData} changeFilterId = {changeFilterId} />
+      <p>
+      </p>
       <Students data={data} FilterId={FilterId}/>
     </div>
   );

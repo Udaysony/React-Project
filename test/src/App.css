@@ -43,6 +43,16 @@ strong{
 
 ::selection{
   background:rgba(125, 188, 255, 0.6); }
+
+.filter-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:  wrap;
+    justify-content: center;
+    flex-grow: 3;
+
+}
+
 .bp3-heading{
   color:#182026;
   font-weight:600;
