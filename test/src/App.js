@@ -16,7 +16,7 @@ function App() {
   }
   return (
     <div className="App">
-      <Filters data={FilterData} changeFilterId = {changeFilterId} />
+      <Filters data={FilterData} FilterId = {FilterId} changeFilterId = {changeFilterId} />
       <p>
       </p>
       <Students data={data} FilterId={FilterId}/>

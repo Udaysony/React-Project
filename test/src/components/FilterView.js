@@ -1,17 +1,20 @@
 import React, {useState} from 'react'
 import '../App.css';
 import { Button } from "@blueprintjs/core";
-export const FilterView = ({data, changeFilterId}) => {
+export const FilterView = ({data, FilterId, changeFilterId}) => {
     // set background:'MediumSeaGreen' onClick
-    const [bgcolor, setbgcolor]  = useState("white")
+    var bgColor = 'white'
+    if (data._id === FilterId){
+        bgColor = 'MediumSeaGreen'
+    }
+    // bgColor = 'MediumSeaGreen'
     return (
         <div className='flex-row-item' >
             <p></p>
-            <Button style={{ background: {bgcolor} ,width:'50%' , height:'50px' }} className='bp3-button' 
+            <Button style={{ background: bgColor, width:'300px' , height:'50px' }} className='bp3-button' 
                 onClick={() => {
-                    
+                    // console.log(bgColor);
                     changeFilterId(data._id)
-                    
                    
                 }
                 }>

@@ -3,7 +3,7 @@ import {FilterView} from './FilterView'
 import { Button } from "@blueprintjs/core";
 import { Col, Row, Grid } from 'react-flexbox-grid'
 
-export const Filters = ({data, changeFilterId}) => {
+export const Filters = ({data, FilterId,changeFilterId}) => {
 
     const INCREMENT = 6
     const filteredData = []
@@ -27,7 +27,7 @@ export const Filters = ({data, changeFilterId}) => {
         <div >
             <div className='flex-row-container'>
            {
-            filteredData.map((d) => < FilterView key= {d._id} data={d} changeFilterId={changeFilterId} /> )
+            filteredData.map((d) => < FilterView key= {d._id} FilterId={FilterId} data={d} changeFilterId={changeFilterId} /> )
             }
 
             </div>
